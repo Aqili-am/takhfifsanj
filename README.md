@@ -1,2 +1,57 @@
-# takhfifsanj
-تخفیف‌سنج | Price comparison and discount-history browser tool for Digikala &amp; Torob. Developed by RealMahdi. Chrome, Firefox and Tampermonkey editions.
+# تخفیف‌سنج · TakhfifSanj
+
+**نسخهٔ ۱۵.۲.۰ | توسعه: مهدی عقیلی (RealMahdi)، یوتیوبر حوزهٔ تکنولوژی**
+
+ابزار مرورگر برای مقایسهٔ قیمت پیشنهادهای ترب، مشاهدهٔ سابقهٔ قیمت دیجی‌کالا و بررسی نشانه‌های تخفیف غیرعادی.
+
+[آموزش و معرفی فارسی](https://aqilistudio.ir/blog/takhfif-sanj-install-price-discount-check) · [پشتیبانی و بازخورد](https://t.me/RealMahdi_a) · [YouTube](https://www.youtube.com/@RealMahdi)
+
+## دانلود و نصب
+
+فایل‌های آماده را از **[Releases](../../releases)** بگیرید. فقط یکی از سه روش زیر را فعال کنید؛ نسخهٔ قبلی را غیرفعال کنید تا دو پنل هم‌زمان اجرا نشوند.
+
+| نسخه | روش نصب |
+| --- | --- |
+| Chrome / Edge / Brave | ZIP را استخراج کنید؛ در `chrome://extensions` حالت Developer mode را روشن کنید و با Load unpacked پوشهٔ حاوی `manifest.json` را انتخاب کنید. |
+| Firefox | ZIP را استخراج کنید؛ در `about:debugging#/runtime/this-firefox` گزینهٔ Load Temporary Add-on را بزنید و `manifest.json` را انتخاب کنید. نصب موقت با بستن مرورگر از بین می‌رود؛ این بسته امضای Mozilla ندارد. |
+| Tampermonkey | فایل `.user.js` را در مدیر اسکریپت Tampermonkey نصب کنید؛ یا تمام کد را در یک اسکریپت جدید جایگزین و ذخیره کنید. |
+
+بعد از نصب، یک صفحهٔ محصول دیجی‌کالا را باز کنید. میان‌بر پنل: **Alt + Shift + G**.
+
+## امکانات
+
+- مقایسهٔ پیشنهادهای ترب و انتخاب دستی نتیجهٔ درست
+- تاریخچهٔ قیمت دیجی‌کالا و ثبت مشاهدات محلی با توجه به واریانت
+- بازرس تخفیف و نمایش وضعیت دادهٔ ناکافی
+- واچ‌لیست، قیمت هدف، اعلان و خروجی داده
+- پنل فارسی، تم روشن/تیره و تغییر اندازه
+
+## محدودیت‌ها و حریم خصوصی
+
+- اتصال مستقیم ایمالز و باسلام فعال نیست؛ دادهٔ مقایسه از ترب می‌آید.
+- تاریخچه به دادهٔ موجود وابسته است؛ ۹۰ روز سابقه برای همهٔ کالاها تضمین نمی‌شود.
+- نتیجهٔ بازرس نشانهٔ آماری است، نه اثبات تخلف فروشنده یا تضمین خرید خوب.
+- هزینهٔ ارسال و تفاوت گارانتی، فروشنده و تنوع را پیش از خرید بررسی کنید.
+- اسکریپت Tampermonkey برای پایش به تب باز وابسته است؛ افزونهٔ مستقل مسیر پس‌زمینه دارد، اما مرورگر باید فعال باشد و دریافت قیمت و اعلان به مجوزها و پاسخ سرویس‌ها وابسته است.
+- اجرای content script صفحه‌های HTTPS را پوشش می‌دهد؛ درخواست‌های قیمت به ترب و دیجی‌کالا ارسال می‌شوند. بعضی درخواست‌های دیجی‌کالا از نشست همان سایت استفاده می‌کنند.
+- این نسخه در فروشگاه Chrome یا Mozilla منتشر/امضا نشده است.
+
+## ساخت از سورس
+
+```sh
+npm install
+npm run build
+npm test
+```
+
+سورس در `src/`، کد افزونه در `extension/ext-src/` و پوشه‌های آمادهٔ مرورگر در `extension/build/` قرار دارند. بررسی نحوی خروجی‌ها انجام شده؛ اجرای زنده روی فروشگاه‌ها و تأیید همهٔ امکانات در مرورگر، بخشی از این انتشار نبوده است. گزارش‌های قدیمی تست در `docs/` تاریخی‌اند و تأیید اجرای مجدد تمام تست‌های این انتشار نیستند.
+
+## اعتبار و مجوز
+
+توسعه و ارتقا: **[RealMahdi_a](https://t.me/RealMahdi_a)** · سازندهٔ موتور پایه: **[GHAFEL_com](https://t.me/GHAFEL_com)**.
+
+استفادهٔ شخصی رایگان است؛ شرایط توزیع و حفظ اعتبار را در [LICENSE_FA.md](LICENSE_FA.md) بخوانید. این پروژه با مجوز MIT عرضه نشده است.
+
+---
+
+**English:** Browser-based price comparison and discount-history inspection for Digikala and Torob. Includes Chrome, Firefox and Tampermonkey editions. Developed by Mehdi Aghili (RealMahdi), based on the original GHAFEL_com engine. See the Persian installation notes and bundled license above.
